@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\newcounter{question}
+\setcounter{question}{0}
+\begin{document}
+
+\newcommand\Que[1]{%
+    \leavevmode\par
+    \stepcounter{question}
+    \noindent
+    Q.\thequestion #1\par}
+
+\newcommand\Ans[2][]{%
+    \leavevmode\par\noindent
+    {A) \textbf{#1}#2\par}}
+
+\Que{
+    $\int{\frac{1}{1+x^2}}dx$
+    }
+\Ans{
+    Let $I = \int{\frac{1}{1+x^2}}dx$\\
+
+    Let $x=\tan{\theta}$
+    or $\theta = \arctan(x)$\\
+
+    Differentiating $x$ w.r.t $\theta$\\
+
+    $\frac{dx}{d\theta} = \sec^2(\theta)$
+    or $dx = \sec^2(\theta) d\theta$\\
+
+    $ \therefore I 
+    = \int{\frac{1}{1+x^2}} dx
+    = \int{\frac{1}{1+\tan^2{\theta}}} \sec^2{\theta} d\theta $\\
+
+    $
+    = \int{\frac{1}{\sec^2{\theta}}} \sec^2{\theta} d\theta
+    $\\
+
+    $
+    = \int{} d\theta
+    = \theta$.
+    Because $
+    \frac{d}{d\theta}(\theta) = 1$\\
+
+    Since $\theta = \arctan(x)$,
+    $
+    \boxed{
+        I = \arctan(x) + C
+    }
+    $
+
+    \noindent\rule{12cm}{0.4pt}\\
+
+    \textbf{Evaluation of $1+\tan^2{\theta}$:}\\
+    $
+    \boxed{
+        \begin{aligned}
+            1+\tan^2{\theta}\\
+            & = 1+\frac{\sin^2{\theta}}{\cos^2{\theta}}\\
+            & = \frac{\cos^2{\theta}}{\cos^2{\theta}} + \frac{\sin^2{\theta}}{\cos^2{\theta}}
+            = \frac{\cos^2{\theta} + \sin^2{\theta}}{\cos^2{\theta}}\\
+            & = \frac{1}{\cos^2{\theta}} 
+                && \textbf{since $\sin^2{\theta} + \cos^2{\theta} = 1$}\\
+            & = \sec^2{\theta}
+                && \textbf{similarly, $1 - \sec^2{\theta} = \tan^2{\theta}$}\\
+        \end{aligned}
+        }
+    $\\
+
+    \textbf{Differentiation of $\tan{\theta}$:}\\
+    $
+    \boxed{
+        \begin{aligned}
+            \frac{d}{d\theta}(\tan{\theta})\\
+            & = \frac{d}{d\theta}(\frac{\sin{\theta}}{\cos{\theta}})\\
+            & =\frac{\cos{\theta}\cos{\theta} - \sin{\theta}(-\sin{\theta})}{\cos^2{\theta}}
+                && \textbf{Quotient Rule: $\frac{d}{d\theta}\frac{f}{g} = \frac{g.f^\prime - f.g^\prime}{g^2}$}\\
+                &   && \textbf{also $(\cos{\theta})^\prime = -\sin{\theta}$ and $(\sin{\theta})^\prime = \cos{\theta}$}\\
+                & =\frac{\cos^2{\theta} + \sin^2{\theta}}{\cos^2{\theta}}\\
+            & =\frac{1}{\cos^2{\theta}}
+                && \textbf{remember: $\sin^2(x) + \cos^2(x) = 1$}\\
+            & =\sec^2{\theta}
+        \end{aligned}
+        }
+    $\\
+    
+    % $\left [\arctan{\theta} \right]_1^{\sqrt{3}}$
+}
+\end{document}
