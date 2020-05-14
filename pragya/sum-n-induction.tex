@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\newcounter{question}
+\setcounter{question}{0}
+\begin{document}
+
+\newcommand\Que[1]{%
+    \leavevmode\par
+    \stepcounter{question}
+    \noindent
+    Q.\thequestion #1\par}
+
+\newcommand\Ans[2][]{%
+    \leavevmode\par\noindent
+    {A) \textbf{#1}#2\par}}
+
+\Que{
+    Prove by induction: $1+2+3+\dots+n = \frac{n(n+1)}{2}$
+
+    For \textbf{all} n.
+}
+\Ans{
+    If we can prove that if the above statement is true for 
+    a given $n$,\\
+    it is also true for $n+1$. We would have
+    proven it for \textbf{all} numbers!\\
+
+    \textit{basis step}: Let $n=1$ The sum $1+\dots+1 = 1 = \frac{1(2)}{2}$\\
+
+    \textit{induction step}: Assume that the statement is
+    true for a given $k$.\\
+    This means $1+2+3+\dots+k=\frac{k(k+1)}{2}$.\\
+    Now we prove this to be true for $k+1$.\\
+
+    Let's consider $1+2+3+\dots+(k+1)$\\
+
+    \begin{align*}
+        1+2+3+\dots+(k+1) 
+        & = 1+2+3+\dots+k+(k+1)\\
+        & = \frac{k(k+1)}{2} + (k+1)\\
+        & = \frac{k(k+1)}{2} + \frac{2(k+1)}{2}\\
+        & = \frac{(k+1)(k+2)}{2}\\
+        & = \frac{(k+1)((k+1)+1)}{2}\\
+    \end{align*}
+
+}
+\end{document}

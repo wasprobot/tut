@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\newcounter{question}
+\setcounter{question}{0}
+\begin{document}
+
+\newcommand\Que[1]{%
+    \leavevmode\par
+    \stepcounter{question}
+    \noindent
+    Q.\thequestion #1\par}
+
+\newcommand\Ans[2][]{%
+    \leavevmode\par\noindent
+    {A) \textbf{#1}#2\par}}
+
+\Que{
+    }
+\Ans{
+    $a^2+b^2=c^2$\\
+    
+    $c = \sqrt{a^2+b^2}$\\
+
+    $a+b+c=1000$\\
+
+    $a+b+\sqrt{a^2+b^2}=1000$\\
+
+    $a+b-1000 = -\sqrt{a^2+b^2}$. Now square both sides:\\
+
+    $(a+b-1000)^2 = (-\sqrt{a^2+b^2})^2$\\
+
+    $((a+b)-1000)^2 = a^2+b^2$\\
+
+    \boxed{
+        (x + y)^2
+        = x^2 + 2xy + y^2
+    }\\
+
+    \boxed{
+        (x - y)^2
+        = x^2 - 2xy + y^2
+    }\\
+
+    $(a+b)^2 - 2.1000(a+b) + 1000^2 = a^2+b^2$\\
+
+    $a^2 + 2ab + b^2 - 2.1000(a+b) + 1000^2 = a^2+b^2$\\
+
+    $a^2+b^2 + 2ab - 2.1000(a+b) + 1000^2 = a^2+b^2$\\
+    
+    $2ab - 2000(a+b) + 1000^2 = 0$\\
+    
+    $2ab + 1000^2 = 2000(a+b)$\\
+    
+    $1 + 2 + \dots + 1000000 = 500000(1000001)$\\
+    
+    $1 + 2 + \dots + n = \frac{n(n+1)}{2}$\\
+
+    $1.2.3.\dots.n = n!$\\
+
+}
+\end{document}
