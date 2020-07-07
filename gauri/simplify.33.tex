@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\newcounter{question}
+\setcounter{question}{0}
+\begin{document}
+
+\newcommand\Que[1]{%
+    \leavevmode\par
+    \stepcounter{question}
+    \noindent
+    Q.\thequestion #1\par}
+
+\newcommand\Ans[2][]{%
+    \leavevmode\par\noindent
+    {A) \textbf{#1}#2\par}}
+
+\Que{
+    Simplify 0.33\dots as a fraction.
+}
+\Ans{
+    Let 
+    \begin{equation}
+        x = 0.33\dots    
+    \end{equation}
+    
+    By multiplying both sides by $10$ we get\\
+    \begin{equation}
+        10x = 3.33\dots    
+    \end{equation}
+    
+    Subtracting $(1)$ from $(2)$
+    \begin{align*}
+        10x-x &= (3.33\dots) - (0.33\dots)\\
+        9x &= 3
+    \end{align*}
+    
+    \begin{align*}
+        3x &= 1 &&\text{dividing both sides by $3$}\\
+        x &= \frac{1}{3} &&\text{dividing both sides by $3$}\\
+    \end{align*}
+}
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\newcounter{question}
+\setcounter{question}{0}
+\begin{document}
+
+\newcommand\Que[1]{%
+    \leavevmode\par
+    \stepcounter{question}
+    \noindent
+    Q.\thequestion #1\par}
+
+\newcommand\Ans[2][]{%
+    \leavevmode\par\noindent
+    {A) \textbf{#1}#2\par}}
+
+\Que{
+    Simplify 5.3434\dots as a fraction.
+}
+\Ans{
+    Let 
+    \begin{equation}
+        x = 5.3434\dots
+    \end{equation}
+    
+    By multiplying both sides by $100$ we get\\
+    \begin{equation}
+        100x = 534.3434\dots
+    \end{equation}
+    
+    Subtracting $(1)$ from $(2)$
+    \begin{align*}
+        100x-x &= 529\\
+        99x &= 529 && \text{(next divide both sides by $99$)}\\
+        x &= \frac{529}{99}\\
+    \end{align*}
+}
+\end{document}
